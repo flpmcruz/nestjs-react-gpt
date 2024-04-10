@@ -18,6 +18,7 @@ module.exports = {
   },
   plugins: ["react-refresh"],
   rules: {
+    "no-constant-condition": "off",
     "react-refresh/only-export-components": [
       "warn",
       { allowConstantExport: true },
@@ -25,5 +26,6 @@ module.exports = {
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/restrict-template-expressions": "off",
     "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/await-thenable": "off",
   },
 };

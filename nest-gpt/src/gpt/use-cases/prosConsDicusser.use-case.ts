@@ -4,7 +4,7 @@ interface Options {
   prompt: string;
 }
 
-export const orthographyCheckUseCase = async (
+export const prosConsDicusserUseCase = async (
   openai: OpenAI,
   options: Options,
 ) => {
@@ -15,7 +15,7 @@ export const orthographyCheckUseCase = async (
       {
         role: 'system',
         content: `
-        Te serán provistos textos en español con posibles errores ortográficos y gramaticales. Las palabras usadas deben existir en Real Academia Española. Debes responder en formato json, tu tarea es corregirlos y retornar información sobre los errores encontrados. También debes dar un porcentaje de acierto por el usuario. Si no hay errores, debes retornar un mensaje de felicitaciones.
+        Se te dará una pregunta y tu tarea es dar una respuesta con pros y contras, la respuesta debe de ser en formato markdown, los pros y contras deben de estar en una lista.
 
         Ejemplo de salida:
         {
@@ -31,12 +31,9 @@ export const orthographyCheckUseCase = async (
       },
     ],
     model: 'gpt-3.5-turbo-1106',
-    temperature: 0.3,
-    max_tokens: 100,
-    response_format: {
-      type: 'json_object',
-    },
+    temperature: 0.8,
+    max_tokens: 500,
   });
 
-  return JSON.parse(completion.choices[0].message.content);
+  return completion.choices[0].message
 };

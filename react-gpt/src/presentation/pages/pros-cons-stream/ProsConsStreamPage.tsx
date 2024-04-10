@@ -1,28 +1,44 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { GptMessage, MyMessage, TypingLoader, TextMessageBox } from '../../components';
-import { ProsConsUseCase } from '../../../core/use-cases';
+import { ProsConsStreamGeneratorUseCase } from '../../../core/use-cases';
 
 interface Message {
   text: string;
   isGpt: boolean;
 }
 
-export const ProsConsPage = () => {
+export const ProsConsStreamPage = () => {
+
+  const abortController = useRef(new AbortController());
+  const isRunning = useRef(false);
 
   const [isLoading, setIsLoading] = useState(false);
   const [messages, setMessages] = useState<Message[]>([])
 
   const handlePost = async (text: string) => {
 
+    if (isRunning.current) {
+      abortController.current.abort();
+      abortController.current = new AbortController();
+    }
+
     setIsLoading(true);
+    isRunning.current = true;
     setMessages((prev) => [...prev, { text: text, isGpt: false }]);
 
-    const { ok, content } = await ProsConsUseCase(text)
-    if (!ok) return
-
-    setMessages((prev) => [...prev, { text: content, isGpt: true }]);
-
+    const stream = ProsConsStreamGeneratorUseCase(text, abortController.current.signal);
     setIsLoading(false);
+    setMessages((prev) => [...prev, { text: '', isGpt: true }]);
+
+    for await (const text of stream) {
+      setMessages((prev) => {
+        const newMessages = [...prev];
+        newMessages[newMessages.length - 1].text = text;
+        return newMessages;
+      });
+    }
+
+    isRunning.current = false;
   }
 
   return (
@@ -30,7 +46,7 @@ export const ProsConsPage = () => {
       <div className="chat-messages">
         <div className="grid grid-cols-12 gap-y-2">
           {/* Bienvenida */}
-          <GptMessage text="Hola, puedes escribir lo que sea que quieres que compare y te de mis puntos de vista" />
+          <GptMessage text="Qué deseas comparar hoy?" />
 
           {
             messages.map((message, index) => (
@@ -41,6 +57,7 @@ export const ProsConsPage = () => {
                 : (
                   <MyMessage key={index} text={message.text} />
                 )
+
             ))
           }
 
@@ -51,6 +68,7 @@ export const ProsConsPage = () => {
               </div>
             )
           }
+
 
         </div>
       </div>
