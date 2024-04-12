@@ -16,6 +16,8 @@ import type { Response } from 'express';
 import { GptService } from './gpt.service';
 import {
   AudioToTextDto,
+  ImageGenerationDto,
+  ImageVariationDto,
   OrtographyDto,
   ProsConsDiscusserDto,
   TextToAudioDto,
@@ -51,6 +53,27 @@ export class GptController {
   ) {
     const filePath = await this.gptService.textToAudio(textToAudioDto);
     res.setHeader('Content-Type', 'audio/mp3');
+    res.status(HttpStatus.OK);
+    res.sendFile(filePath);
+  }
+
+  @Post('image-variation')
+  async imageVariation(@Body() imageVariationDto: ImageVariationDto) {
+    return this.gptService.imageVariation(imageVariationDto);
+  }
+
+  @Post('image-generation')
+  async imageGeneration(@Body() imageGenerationDto: ImageGenerationDto) {
+    return this.gptService.imageGeneration(imageGenerationDto);
+  }
+
+  @Get('image-generation/:fileId')
+  async imageGenerationGetter(
+    @Res() res: Response,
+    @Param('fileId') fileId: string,
+  ) {
+    const filePath = await this.gptService.getAudio(fileId);
+    res.setHeader('Content-Type', 'image/png');
     res.status(HttpStatus.OK);
     res.sendFile(filePath);
   }
@@ -112,7 +135,6 @@ export class GptController {
       const piece = chunk.choices[0].delta.content || '';
       res.write(piece);
     }
-
     res.end();
   }
 }

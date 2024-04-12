@@ -1,0 +1,520 @@
+{
+	"info": {
+		"_postman_id": "0d5a4bc8-2622-4594-b971-5d1f518792eb",
+		"name": "gpt-nest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20469736"
+	},
+	"item": [
+		{
+			"name": "ortografia",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiJlUnVmUXJxMEhGalJMTHk4T3M1ekJya013SFFQV08xYjVwYlJQcVVPUXpJPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiS2ZEYWhGTjNSZmlPZTgxNmVIeHlBUSIsInN1YiI6IjkxOGJmNTYwLWQwYzEtNzAwNy1hY2ZjLThhNmY3OTNiYWI3YSIsImF1ZCI6Ijd1NzN2OGFwNzYwaHBqbzJvazAxa2ZuYTFtIiwiZXZlbnRfaWQiOiI5ZjFmNzg5OS04MjQyLTRiM2MtYmJkMy02YTU1N2RhNzFiMDEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTcxMjY4NzA4MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfQllVNVRTb3pCIiwiY29nbml0bzp1c2VybmFtZSI6InB1a2llcyIsImV4cCI6MTcxMjY5MDY4MywiaWF0IjoxNzEyNjg3MDgzLCJqdGkiOiJjNGRhOWYxMy1iMWNjLTQ2OTEtOTQzYS03ZThlOTI5Y2ExMmYifQ.D77x2FmtioWvc3JFTUoZs6NN2LcL0UKfrXZEPNlICuFtwVksnEv5WHGL-LmQ7E4rAy1XqvS79SIaoAE2jfi2ooEejnuVqF6iJev-50o2o7OX0QVXN5W1kdVYk_xUPIvROlCDCn12QeKVN_RgvU5IhVi6y8ubAmUjpb8wnwnFpHtyCooVduKZyka6WPuVvjxrkaZWmdtbaxJm8MbFWXlKcdg_F_m6Tptnisfj1w0d2qJ74nE_jfriUZakYAB2Hm2n8mrWUPT3dbAwK7kLX3U-MhjDkIoNr2Z6xUeNWLPoVmXhTC-aSK9gBVym8pkdwfz6sJ6AjvGBDKGscvEzBHH4qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJraWQiOiJlUnVmUXJxMEhGalJMTHk4T3M1ekJya013SFFQV08xYjVwYlJQcVVPUXpJPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiS2ZEYWhGTjNSZmlPZTgxNmVIeHlBUSIsInN1YiI6IjkxOGJmNTYwLWQwYzEtNzAwNy1hY2ZjLThhNmY3OTNiYWI3YSIsImF1ZCI6Ijd1NzN2OGFwNzYwaHBqbzJvazAxa2ZuYTFtIiwiZXZlbnRfaWQiOiI5ZjFmNzg5OS04MjQyLTRiM2MtYmJkMy02YTU1N2RhNzFiMDEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTcxMjY4NzA4MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfQllVNVRTb3pCIiwiY29nbml0bzp1c2VybmFtZSI6InB1a2llcyIsImV4cCI6MTcxMjY5MDY4MywiaWF0IjoxNzEyNjg3MDgzLCJqdGkiOiJjNGRhOWYxMy1iMWNjLTQ2OTEtOTQzYS03ZThlOTI5Y2ExMmYifQ.D77x2FmtioWvc3JFTUoZs6NN2LcL0UKfrXZEPNlICuFtwVksnEv5WHGL-LmQ7E4rAy1XqvS79SIaoAE2jfi2ooEejnuVqF6iJev-50o2o7OX0QVXN5W1kdVYk_xUPIvROlCDCn12QeKVN_RgvU5IhVi6y8ubAmUjpb8wnwnFpHtyCooVduKZyka6WPuVvjxrkaZWmdtbaxJm8MbFWXlKcdg_F_m6Tptnisfj1w0d2qJ74nE_jfriUZakYAB2Hm2n8mrWUPT3dbAwK7kLX3U-MhjDkIoNr2Z6xUeNWLPoVmXhTC-aSK9gBVym8pkdwfz6sJ6AjvGBDKGscvEzBHH4qg",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "prompt",
+							"value": "Hola, mi nombre de Felipe y vivo en panama",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/gpt/orthography-check",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gpt",
+						"orthography-check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "proscons",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiJlUnVmUXJxMEhGalJMTHk4T3M1ekJya013SFFQV08xYjVwYlJQcVVPUXpJPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiS2ZEYWhGTjNSZmlPZTgxNmVIeHlBUSIsInN1YiI6IjkxOGJmNTYwLWQwYzEtNzAwNy1hY2ZjLThhNmY3OTNiYWI3YSIsImF1ZCI6Ijd1NzN2OGFwNzYwaHBqbzJvazAxa2ZuYTFtIiwiZXZlbnRfaWQiOiI5ZjFmNzg5OS04MjQyLTRiM2MtYmJkMy02YTU1N2RhNzFiMDEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTcxMjY4NzA4MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfQllVNVRTb3pCIiwiY29nbml0bzp1c2VybmFtZSI6InB1a2llcyIsImV4cCI6MTcxMjY5MDY4MywiaWF0IjoxNzEyNjg3MDgzLCJqdGkiOiJjNGRhOWYxMy1iMWNjLTQ2OTEtOTQzYS03ZThlOTI5Y2ExMmYifQ.D77x2FmtioWvc3JFTUoZs6NN2LcL0UKfrXZEPNlICuFtwVksnEv5WHGL-LmQ7E4rAy1XqvS79SIaoAE2jfi2ooEejnuVqF6iJev-50o2o7OX0QVXN5W1kdVYk_xUPIvROlCDCn12QeKVN_RgvU5IhVi6y8ubAmUjpb8wnwnFpHtyCooVduKZyka6WPuVvjxrkaZWmdtbaxJm8MbFWXlKcdg_F_m6Tptnisfj1w0d2qJ74nE_jfriUZakYAB2Hm2n8mrWUPT3dbAwK7kLX3U-MhjDkIoNr2Z6xUeNWLPoVmXhTC-aSK9gBVym8pkdwfz6sJ6AjvGBDKGscvEzBHH4qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJraWQiOiJlUnVmUXJxMEhGalJMTHk4T3M1ekJya013SFFQV08xYjVwYlJQcVVPUXpJPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiS2ZEYWhGTjNSZmlPZTgxNmVIeHlBUSIsInN1YiI6IjkxOGJmNTYwLWQwYzEtNzAwNy1hY2ZjLThhNmY3OTNiYWI3YSIsImF1ZCI6Ijd1NzN2OGFwNzYwaHBqbzJvazAxa2ZuYTFtIiwiZXZlbnRfaWQiOiI5ZjFmNzg5OS04MjQyLTRiM2MtYmJkMy02YTU1N2RhNzFiMDEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTcxMjY4NzA4MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfQllVNVRTb3pCIiwiY29nbml0bzp1c2VybmFtZSI6InB1a2llcyIsImV4cCI6MTcxMjY5MDY4MywiaWF0IjoxNzEyNjg3MDgzLCJqdGkiOiJjNGRhOWYxMy1iMWNjLTQ2OTEtOTQzYS03ZThlOTI5Y2ExMmYifQ.D77x2FmtioWvc3JFTUoZs6NN2LcL0UKfrXZEPNlICuFtwVksnEv5WHGL-LmQ7E4rAy1XqvS79SIaoAE2jfi2ooEejnuVqF6iJev-50o2o7OX0QVXN5W1kdVYk_xUPIvROlCDCn12QeKVN_RgvU5IhVi6y8ubAmUjpb8wnwnFpHtyCooVduKZyka6WPuVvjxrkaZWmdtbaxJm8MbFWXlKcdg_F_m6Tptnisfj1w0d2qJ74nE_jfriUZakYAB2Hm2n8mrWUPT3dbAwK7kLX3U-MhjDkIoNr2Z6xUeNWLPoVmXhTC-aSK9gBVym8pkdwfz6sJ6AjvGBDKGscvEzBHH4qg",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "prompt",
+							"value": "¿Puedes comparar entre un carro o una moto?",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/gpt/pros-cons-discusser",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gpt",
+						"pros-cons-discusser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "translate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiJlUnVmUXJxMEhGalJMTHk4T3M1ekJya013SFFQV08xYjVwYlJQcVVPUXpJPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiS2ZEYWhGTjNSZmlPZTgxNmVIeHlBUSIsInN1YiI6IjkxOGJmNTYwLWQwYzEtNzAwNy1hY2ZjLThhNmY3OTNiYWI3YSIsImF1ZCI6Ijd1NzN2OGFwNzYwaHBqbzJvazAxa2ZuYTFtIiwiZXZlbnRfaWQiOiI5ZjFmNzg5OS04MjQyLTRiM2MtYmJkMy02YTU1N2RhNzFiMDEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTcxMjY4NzA4MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfQllVNVRTb3pCIiwiY29nbml0bzp1c2VybmFtZSI6InB1a2llcyIsImV4cCI6MTcxMjY5MDY4MywiaWF0IjoxNzEyNjg3MDgzLCJqdGkiOiJjNGRhOWYxMy1iMWNjLTQ2OTEtOTQzYS03ZThlOTI5Y2ExMmYifQ.D77x2FmtioWvc3JFTUoZs6NN2LcL0UKfrXZEPNlICuFtwVksnEv5WHGL-LmQ7E4rAy1XqvS79SIaoAE2jfi2ooEejnuVqF6iJev-50o2o7OX0QVXN5W1kdVYk_xUPIvROlCDCn12QeKVN_RgvU5IhVi6y8ubAmUjpb8wnwnFpHtyCooVduKZyka6WPuVvjxrkaZWmdtbaxJm8MbFWXlKcdg_F_m6Tptnisfj1w0d2qJ74nE_jfriUZakYAB2Hm2n8mrWUPT3dbAwK7kLX3U-MhjDkIoNr2Z6xUeNWLPoVmXhTC-aSK9gBVym8pkdwfz6sJ6AjvGBDKGscvEzBHH4qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJraWQiOiJlUnVmUXJxMEhGalJMTHk4T3M1ekJya013SFFQV08xYjVwYlJQcVVPUXpJPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiS2ZEYWhGTjNSZmlPZTgxNmVIeHlBUSIsInN1YiI6IjkxOGJmNTYwLWQwYzEtNzAwNy1hY2ZjLThhNmY3OTNiYWI3YSIsImF1ZCI6Ijd1NzN2OGFwNzYwaHBqbzJvazAxa2ZuYTFtIiwiZXZlbnRfaWQiOiI5ZjFmNzg5OS04MjQyLTRiM2MtYmJkMy02YTU1N2RhNzFiMDEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTcxMjY4NzA4MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfQllVNVRTb3pCIiwiY29nbml0bzp1c2VybmFtZSI6InB1a2llcyIsImV4cCI6MTcxMjY5MDY4MywiaWF0IjoxNzEyNjg3MDgzLCJqdGkiOiJjNGRhOWYxMy1iMWNjLTQ2OTEtOTQzYS03ZThlOTI5Y2ExMmYifQ.D77x2FmtioWvc3JFTUoZs6NN2LcL0UKfrXZEPNlICuFtwVksnEv5WHGL-LmQ7E4rAy1XqvS79SIaoAE2jfi2ooEejnuVqF6iJev-50o2o7OX0QVXN5W1kdVYk_xUPIvROlCDCn12QeKVN_RgvU5IhVi6y8ubAmUjpb8wnwnFpHtyCooVduKZyka6WPuVvjxrkaZWmdtbaxJm8MbFWXlKcdg_F_m6Tptnisfj1w0d2qJ74nE_jfriUZakYAB2Hm2n8mrWUPT3dbAwK7kLX3U-MhjDkIoNr2Z6xUeNWLPoVmXhTC-aSK9gBVym8pkdwfz6sJ6AjvGBDKGscvEzBHH4qg",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "prompt",
+							"value": "muchísimas gracias Laneycka por tu reseña y por cuidar tan bien de nuestra casa. Esperamos tenerte de vuelta en otra ocasión\n",
+							"type": "text"
+						},
+						{
+							"key": "voice",
+							"value": "nova",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/gpt/translate",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gpt",
+						"translate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "text-to-audio",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiJlUnVmUXJxMEhGalJMTHk4T3M1ekJya013SFFQV08xYjVwYlJQcVVPUXpJPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiS2ZEYWhGTjNSZmlPZTgxNmVIeHlBUSIsInN1YiI6IjkxOGJmNTYwLWQwYzEtNzAwNy1hY2ZjLThhNmY3OTNiYWI3YSIsImF1ZCI6Ijd1NzN2OGFwNzYwaHBqbzJvazAxa2ZuYTFtIiwiZXZlbnRfaWQiOiI5ZjFmNzg5OS04MjQyLTRiM2MtYmJkMy02YTU1N2RhNzFiMDEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTcxMjY4NzA4MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfQllVNVRTb3pCIiwiY29nbml0bzp1c2VybmFtZSI6InB1a2llcyIsImV4cCI6MTcxMjY5MDY4MywiaWF0IjoxNzEyNjg3MDgzLCJqdGkiOiJjNGRhOWYxMy1iMWNjLTQ2OTEtOTQzYS03ZThlOTI5Y2ExMmYifQ.D77x2FmtioWvc3JFTUoZs6NN2LcL0UKfrXZEPNlICuFtwVksnEv5WHGL-LmQ7E4rAy1XqvS79SIaoAE2jfi2ooEejnuVqF6iJev-50o2o7OX0QVXN5W1kdVYk_xUPIvROlCDCn12QeKVN_RgvU5IhVi6y8ubAmUjpb8wnwnFpHtyCooVduKZyka6WPuVvjxrkaZWmdtbaxJm8MbFWXlKcdg_F_m6Tptnisfj1w0d2qJ74nE_jfriUZakYAB2Hm2n8mrWUPT3dbAwK7kLX3U-MhjDkIoNr2Z6xUeNWLPoVmXhTC-aSK9gBVym8pkdwfz6sJ6AjvGBDKGscvEzBHH4qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJraWQiOiJlUnVmUXJxMEhGalJMTHk4T3M1ekJya013SFFQV08xYjVwYlJQcVVPUXpJPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiS2ZEYWhGTjNSZmlPZTgxNmVIeHlBUSIsInN1YiI6IjkxOGJmNTYwLWQwYzEtNzAwNy1hY2ZjLThhNmY3OTNiYWI3YSIsImF1ZCI6Ijd1NzN2OGFwNzYwaHBqbzJvazAxa2ZuYTFtIiwiZXZlbnRfaWQiOiI5ZjFmNzg5OS04MjQyLTRiM2MtYmJkMy02YTU1N2RhNzFiMDEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTcxMjY4NzA4MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfQllVNVRTb3pCIiwiY29nbml0bzp1c2VybmFtZSI6InB1a2llcyIsImV4cCI6MTcxMjY5MDY4MywiaWF0IjoxNzEyNjg3MDgzLCJqdGkiOiJjNGRhOWYxMy1iMWNjLTQ2OTEtOTQzYS03ZThlOTI5Y2ExMmYifQ.D77x2FmtioWvc3JFTUoZs6NN2LcL0UKfrXZEPNlICuFtwVksnEv5WHGL-LmQ7E4rAy1XqvS79SIaoAE2jfi2ooEejnuVqF6iJev-50o2o7OX0QVXN5W1kdVYk_xUPIvROlCDCn12QeKVN_RgvU5IhVi6y8ubAmUjpb8wnwnFpHtyCooVduKZyka6WPuVvjxrkaZWmdtbaxJm8MbFWXlKcdg_F_m6Tptnisfj1w0d2qJ74nE_jfriUZakYAB2Hm2n8mrWUPT3dbAwK7kLX3U-MhjDkIoNr2Z6xUeNWLPoVmXhTC-aSK9gBVym8pkdwfz6sJ6AjvGBDKGscvEzBHH4qg",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "prompt",
+							"value": "Traduce: muchísimas gracias Laneycka por tu reseña y por cuidar tan bien de nuestra casa. Esperamos tenerte de vuelta en otra ocasión\n",
+							"type": "text"
+						},
+						{
+							"key": "lang",
+							"value": "ingles",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/gpt/text-to-audio",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gpt",
+						"text-to-audio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "image-generation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiJlUnVmUXJxMEhGalJMTHk4T3M1ekJya013SFFQV08xYjVwYlJQcVVPUXpJPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiS2ZEYWhGTjNSZmlPZTgxNmVIeHlBUSIsInN1YiI6IjkxOGJmNTYwLWQwYzEtNzAwNy1hY2ZjLThhNmY3OTNiYWI3YSIsImF1ZCI6Ijd1NzN2OGFwNzYwaHBqbzJvazAxa2ZuYTFtIiwiZXZlbnRfaWQiOiI5ZjFmNzg5OS04MjQyLTRiM2MtYmJkMy02YTU1N2RhNzFiMDEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTcxMjY4NzA4MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfQllVNVRTb3pCIiwiY29nbml0bzp1c2VybmFtZSI6InB1a2llcyIsImV4cCI6MTcxMjY5MDY4MywiaWF0IjoxNzEyNjg3MDgzLCJqdGkiOiJjNGRhOWYxMy1iMWNjLTQ2OTEtOTQzYS03ZThlOTI5Y2ExMmYifQ.D77x2FmtioWvc3JFTUoZs6NN2LcL0UKfrXZEPNlICuFtwVksnEv5WHGL-LmQ7E4rAy1XqvS79SIaoAE2jfi2ooEejnuVqF6iJev-50o2o7OX0QVXN5W1kdVYk_xUPIvROlCDCn12QeKVN_RgvU5IhVi6y8ubAmUjpb8wnwnFpHtyCooVduKZyka6WPuVvjxrkaZWmdtbaxJm8MbFWXlKcdg_F_m6Tptnisfj1w0d2qJ74nE_jfriUZakYAB2Hm2n8mrWUPT3dbAwK7kLX3U-MhjDkIoNr2Z6xUeNWLPoVmXhTC-aSK9gBVym8pkdwfz6sJ6AjvGBDKGscvEzBHH4qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJraWQiOiJlUnVmUXJxMEhGalJMTHk4T3M1ekJya013SFFQV08xYjVwYlJQcVVPUXpJPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiS2ZEYWhGTjNSZmlPZTgxNmVIeHlBUSIsInN1YiI6IjkxOGJmNTYwLWQwYzEtNzAwNy1hY2ZjLThhNmY3OTNiYWI3YSIsImF1ZCI6Ijd1NzN2OGFwNzYwaHBqbzJvazAxa2ZuYTFtIiwiZXZlbnRfaWQiOiI5ZjFmNzg5OS04MjQyLTRiM2MtYmJkMy02YTU1N2RhNzFiMDEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTcxMjY4NzA4MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfQllVNVRTb3pCIiwiY29nbml0bzp1c2VybmFtZSI6InB1a2llcyIsImV4cCI6MTcxMjY5MDY4MywiaWF0IjoxNzEyNjg3MDgzLCJqdGkiOiJjNGRhOWYxMy1iMWNjLTQ2OTEtOTQzYS03ZThlOTI5Y2ExMmYifQ.D77x2FmtioWvc3JFTUoZs6NN2LcL0UKfrXZEPNlICuFtwVksnEv5WHGL-LmQ7E4rAy1XqvS79SIaoAE2jfi2ooEejnuVqF6iJev-50o2o7OX0QVXN5W1kdVYk_xUPIvROlCDCn12QeKVN_RgvU5IhVi6y8ubAmUjpb8wnwnFpHtyCooVduKZyka6WPuVvjxrkaZWmdtbaxJm8MbFWXlKcdg_F_m6Tptnisfj1w0d2qJ74nE_jfriUZakYAB2Hm2n8mrWUPT3dbAwK7kLX3U-MhjDkIoNr2Z6xUeNWLPoVmXhTC-aSK9gBVym8pkdwfz6sJ6AjvGBDKGscvEzBHH4qg",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "prompt",
+							"value": "Necesito una imagen de un perro que rste tomando una copa con un gato, siendo amigos pero con desconfianza, ambos deben estarse mirando con malicia y desconfianza",
+							"type": "text"
+						},
+						{
+							"key": "maskImage",
+							"value": "abv",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "originalImage",
+							"value": "abc",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/gpt/image-generation",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gpt",
+						"image-generation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "image-variation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiJlUnVmUXJxMEhGalJMTHk4T3M1ekJya013SFFQV08xYjVwYlJQcVVPUXpJPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiS2ZEYWhGTjNSZmlPZTgxNmVIeHlBUSIsInN1YiI6IjkxOGJmNTYwLWQwYzEtNzAwNy1hY2ZjLThhNmY3OTNiYWI3YSIsImF1ZCI6Ijd1NzN2OGFwNzYwaHBqbzJvazAxa2ZuYTFtIiwiZXZlbnRfaWQiOiI5ZjFmNzg5OS04MjQyLTRiM2MtYmJkMy02YTU1N2RhNzFiMDEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTcxMjY4NzA4MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfQllVNVRTb3pCIiwiY29nbml0bzp1c2VybmFtZSI6InB1a2llcyIsImV4cCI6MTcxMjY5MDY4MywiaWF0IjoxNzEyNjg3MDgzLCJqdGkiOiJjNGRhOWYxMy1iMWNjLTQ2OTEtOTQzYS03ZThlOTI5Y2ExMmYifQ.D77x2FmtioWvc3JFTUoZs6NN2LcL0UKfrXZEPNlICuFtwVksnEv5WHGL-LmQ7E4rAy1XqvS79SIaoAE2jfi2ooEejnuVqF6iJev-50o2o7OX0QVXN5W1kdVYk_xUPIvROlCDCn12QeKVN_RgvU5IhVi6y8ubAmUjpb8wnwnFpHtyCooVduKZyka6WPuVvjxrkaZWmdtbaxJm8MbFWXlKcdg_F_m6Tptnisfj1w0d2qJ74nE_jfriUZakYAB2Hm2n8mrWUPT3dbAwK7kLX3U-MhjDkIoNr2Z6xUeNWLPoVmXhTC-aSK9gBVym8pkdwfz6sJ6AjvGBDKGscvEzBHH4qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJraWQiOiJlUnVmUXJxMEhGalJMTHk4T3M1ekJya013SFFQV08xYjVwYlJQcVVPUXpJPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiS2ZEYWhGTjNSZmlPZTgxNmVIeHlBUSIsInN1YiI6IjkxOGJmNTYwLWQwYzEtNzAwNy1hY2ZjLThhNmY3OTNiYWI3YSIsImF1ZCI6Ijd1NzN2OGFwNzYwaHBqbzJvazAxa2ZuYTFtIiwiZXZlbnRfaWQiOiI5ZjFmNzg5OS04MjQyLTRiM2MtYmJkMy02YTU1N2RhNzFiMDEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTcxMjY4NzA4MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfQllVNVRTb3pCIiwiY29nbml0bzp1c2VybmFtZSI6InB1a2llcyIsImV4cCI6MTcxMjY5MDY4MywiaWF0IjoxNzEyNjg3MDgzLCJqdGkiOiJjNGRhOWYxMy1iMWNjLTQ2OTEtOTQzYS03ZThlOTI5Y2ExMmYifQ.D77x2FmtioWvc3JFTUoZs6NN2LcL0UKfrXZEPNlICuFtwVksnEv5WHGL-LmQ7E4rAy1XqvS79SIaoAE2jfi2ooEejnuVqF6iJev-50o2o7OX0QVXN5W1kdVYk_xUPIvROlCDCn12QeKVN_RgvU5IhVi6y8ubAmUjpb8wnwnFpHtyCooVduKZyka6WPuVvjxrkaZWmdtbaxJm8MbFWXlKcdg_F_m6Tptnisfj1w0d2qJ74nE_jfriUZakYAB2Hm2n8mrWUPT3dbAwK7kLX3U-MhjDkIoNr2Z6xUeNWLPoVmXhTC-aSK9gBVym8pkdwfz6sJ6AjvGBDKGscvEzBHH4qg",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "baseImage",
+							"value": "https://www.educaciontrespuntocero.com/wp-content/uploads/2020/04/mejores-bancos-de-imagenes-gratis.jpg",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/gpt/image-variation",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gpt",
+						"image-variation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-image",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiJlUnVmUXJxMEhGalJMTHk4T3M1ekJya013SFFQV08xYjVwYlJQcVVPUXpJPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiS2ZEYWhGTjNSZmlPZTgxNmVIeHlBUSIsInN1YiI6IjkxOGJmNTYwLWQwYzEtNzAwNy1hY2ZjLThhNmY3OTNiYWI3YSIsImF1ZCI6Ijd1NzN2OGFwNzYwaHBqbzJvazAxa2ZuYTFtIiwiZXZlbnRfaWQiOiI5ZjFmNzg5OS04MjQyLTRiM2MtYmJkMy02YTU1N2RhNzFiMDEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTcxMjY4NzA4MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfQllVNVRTb3pCIiwiY29nbml0bzp1c2VybmFtZSI6InB1a2llcyIsImV4cCI6MTcxMjY5MDY4MywiaWF0IjoxNzEyNjg3MDgzLCJqdGkiOiJjNGRhOWYxMy1iMWNjLTQ2OTEtOTQzYS03ZThlOTI5Y2ExMmYifQ.D77x2FmtioWvc3JFTUoZs6NN2LcL0UKfrXZEPNlICuFtwVksnEv5WHGL-LmQ7E4rAy1XqvS79SIaoAE2jfi2ooEejnuVqF6iJev-50o2o7OX0QVXN5W1kdVYk_xUPIvROlCDCn12QeKVN_RgvU5IhVi6y8ubAmUjpb8wnwnFpHtyCooVduKZyka6WPuVvjxrkaZWmdtbaxJm8MbFWXlKcdg_F_m6Tptnisfj1w0d2qJ74nE_jfriUZakYAB2Hm2n8mrWUPT3dbAwK7kLX3U-MhjDkIoNr2Z6xUeNWLPoVmXhTC-aSK9gBVym8pkdwfz6sJ6AjvGBDKGscvEzBHH4qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJraWQiOiJlUnVmUXJxMEhGalJMTHk4T3M1ekJya013SFFQV08xYjVwYlJQcVVPUXpJPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiS2ZEYWhGTjNSZmlPZTgxNmVIeHlBUSIsInN1YiI6IjkxOGJmNTYwLWQwYzEtNzAwNy1hY2ZjLThhNmY3OTNiYWI3YSIsImF1ZCI6Ijd1NzN2OGFwNzYwaHBqbzJvazAxa2ZuYTFtIiwiZXZlbnRfaWQiOiI5ZjFmNzg5OS04MjQyLTRiM2MtYmJkMy02YTU1N2RhNzFiMDEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTcxMjY4NzA4MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfQllVNVRTb3pCIiwiY29nbml0bzp1c2VybmFtZSI6InB1a2llcyIsImV4cCI6MTcxMjY5MDY4MywiaWF0IjoxNzEyNjg3MDgzLCJqdGkiOiJjNGRhOWYxMy1iMWNjLTQ2OTEtOTQzYS03ZThlOTI5Y2ExMmYifQ.D77x2FmtioWvc3JFTUoZs6NN2LcL0UKfrXZEPNlICuFtwVksnEv5WHGL-LmQ7E4rAy1XqvS79SIaoAE2jfi2ooEejnuVqF6iJev-50o2o7OX0QVXN5W1kdVYk_xUPIvROlCDCn12QeKVN_RgvU5IhVi6y8ubAmUjpb8wnwnFpHtyCooVduKZyka6WPuVvjxrkaZWmdtbaxJm8MbFWXlKcdg_F_m6Tptnisfj1w0d2qJ74nE_jfriUZakYAB2Hm2n8mrWUPT3dbAwK7kLX3U-MhjDkIoNr2Z6xUeNWLPoVmXhTC-aSK9gBVym8pkdwfz6sJ6AjvGBDKGscvEzBHH4qg",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "prompt",
+							"value": "Hola genera una gato",
+							"type": "text"
+						},
+						{
+							"key": "maskImage",
+							"value": "abv",
+							"type": "text"
+						},
+						{
+							"key": "originalImage",
+							"value": "abc",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/gpt/image-generation/1712939260971",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gpt",
+						"image-generation",
+						"1712939260971"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "audio-to-text",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiJlUnVmUXJxMEhGalJMTHk4T3M1ekJya013SFFQV08xYjVwYlJQcVVPUXpJPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiS2ZEYWhGTjNSZmlPZTgxNmVIeHlBUSIsInN1YiI6IjkxOGJmNTYwLWQwYzEtNzAwNy1hY2ZjLThhNmY3OTNiYWI3YSIsImF1ZCI6Ijd1NzN2OGFwNzYwaHBqbzJvazAxa2ZuYTFtIiwiZXZlbnRfaWQiOiI5ZjFmNzg5OS04MjQyLTRiM2MtYmJkMy02YTU1N2RhNzFiMDEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTcxMjY4NzA4MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfQllVNVRTb3pCIiwiY29nbml0bzp1c2VybmFtZSI6InB1a2llcyIsImV4cCI6MTcxMjY5MDY4MywiaWF0IjoxNzEyNjg3MDgzLCJqdGkiOiJjNGRhOWYxMy1iMWNjLTQ2OTEtOTQzYS03ZThlOTI5Y2ExMmYifQ.D77x2FmtioWvc3JFTUoZs6NN2LcL0UKfrXZEPNlICuFtwVksnEv5WHGL-LmQ7E4rAy1XqvS79SIaoAE2jfi2ooEejnuVqF6iJev-50o2o7OX0QVXN5W1kdVYk_xUPIvROlCDCn12QeKVN_RgvU5IhVi6y8ubAmUjpb8wnwnFpHtyCooVduKZyka6WPuVvjxrkaZWmdtbaxJm8MbFWXlKcdg_F_m6Tptnisfj1w0d2qJ74nE_jfriUZakYAB2Hm2n8mrWUPT3dbAwK7kLX3U-MhjDkIoNr2Z6xUeNWLPoVmXhTC-aSK9gBVym8pkdwfz6sJ6AjvGBDKGscvEzBHH4qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJraWQiOiJlUnVmUXJxMEhGalJMTHk4T3M1ekJya013SFFQV08xYjVwYlJQcVVPUXpJPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiS2ZEYWhGTjNSZmlPZTgxNmVIeHlBUSIsInN1YiI6IjkxOGJmNTYwLWQwYzEtNzAwNy1hY2ZjLThhNmY3OTNiYWI3YSIsImF1ZCI6Ijd1NzN2OGFwNzYwaHBqbzJvazAxa2ZuYTFtIiwiZXZlbnRfaWQiOiI5ZjFmNzg5OS04MjQyLTRiM2MtYmJkMy02YTU1N2RhNzFiMDEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTcxMjY4NzA4MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfQllVNVRTb3pCIiwiY29nbml0bzp1c2VybmFtZSI6InB1a2llcyIsImV4cCI6MTcxMjY5MDY4MywiaWF0IjoxNzEyNjg3MDgzLCJqdGkiOiJjNGRhOWYxMy1iMWNjLTQ2OTEtOTQzYS03ZThlOTI5Y2ExMmYifQ.D77x2FmtioWvc3JFTUoZs6NN2LcL0UKfrXZEPNlICuFtwVksnEv5WHGL-LmQ7E4rAy1XqvS79SIaoAE2jfi2ooEejnuVqF6iJev-50o2o7OX0QVXN5W1kdVYk_xUPIvROlCDCn12QeKVN_RgvU5IhVi6y8ubAmUjpb8wnwnFpHtyCooVduKZyka6WPuVvjxrkaZWmdtbaxJm8MbFWXlKcdg_F_m6Tptnisfj1w0d2qJ74nE_jfriUZakYAB2Hm2n8mrWUPT3dbAwK7kLX3U-MhjDkIoNr2Z6xUeNWLPoVmXhTC-aSK9gBVym8pkdwfz6sJ6AjvGBDKGscvEzBHH4qg",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "prompt",
+							"value": "Manten todos los signos de puntuacion y hummm",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/flpmi/Downloads/El_parque.m4a"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/gpt/audio-to-text",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gpt",
+						"audio-to-text"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-audio",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiJlUnVmUXJxMEhGalJMTHk4T3M1ekJya013SFFQV08xYjVwYlJQcVVPUXpJPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiS2ZEYWhGTjNSZmlPZTgxNmVIeHlBUSIsInN1YiI6IjkxOGJmNTYwLWQwYzEtNzAwNy1hY2ZjLThhNmY3OTNiYWI3YSIsImF1ZCI6Ijd1NzN2OGFwNzYwaHBqbzJvazAxa2ZuYTFtIiwiZXZlbnRfaWQiOiI5ZjFmNzg5OS04MjQyLTRiM2MtYmJkMy02YTU1N2RhNzFiMDEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTcxMjY4NzA4MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfQllVNVRTb3pCIiwiY29nbml0bzp1c2VybmFtZSI6InB1a2llcyIsImV4cCI6MTcxMjY5MDY4MywiaWF0IjoxNzEyNjg3MDgzLCJqdGkiOiJjNGRhOWYxMy1iMWNjLTQ2OTEtOTQzYS03ZThlOTI5Y2ExMmYifQ.D77x2FmtioWvc3JFTUoZs6NN2LcL0UKfrXZEPNlICuFtwVksnEv5WHGL-LmQ7E4rAy1XqvS79SIaoAE2jfi2ooEejnuVqF6iJev-50o2o7OX0QVXN5W1kdVYk_xUPIvROlCDCn12QeKVN_RgvU5IhVi6y8ubAmUjpb8wnwnFpHtyCooVduKZyka6WPuVvjxrkaZWmdtbaxJm8MbFWXlKcdg_F_m6Tptnisfj1w0d2qJ74nE_jfriUZakYAB2Hm2n8mrWUPT3dbAwK7kLX3U-MhjDkIoNr2Z6xUeNWLPoVmXhTC-aSK9gBVym8pkdwfz6sJ6AjvGBDKGscvEzBHH4qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJraWQiOiJlUnVmUXJxMEhGalJMTHk4T3M1ekJya013SFFQV08xYjVwYlJQcVVPUXpJPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiS2ZEYWhGTjNSZmlPZTgxNmVIeHlBUSIsInN1YiI6IjkxOGJmNTYwLWQwYzEtNzAwNy1hY2ZjLThhNmY3OTNiYWI3YSIsImF1ZCI6Ijd1NzN2OGFwNzYwaHBqbzJvazAxa2ZuYTFtIiwiZXZlbnRfaWQiOiI5ZjFmNzg5OS04MjQyLTRiM2MtYmJkMy02YTU1N2RhNzFiMDEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTcxMjY4NzA4MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfQllVNVRTb3pCIiwiY29nbml0bzp1c2VybmFtZSI6InB1a2llcyIsImV4cCI6MTcxMjY5MDY4MywiaWF0IjoxNzEyNjg3MDgzLCJqdGkiOiJjNGRhOWYxMy1iMWNjLTQ2OTEtOTQzYS03ZThlOTI5Y2ExMmYifQ.D77x2FmtioWvc3JFTUoZs6NN2LcL0UKfrXZEPNlICuFtwVksnEv5WHGL-LmQ7E4rAy1XqvS79SIaoAE2jfi2ooEejnuVqF6iJev-50o2o7OX0QVXN5W1kdVYk_xUPIvROlCDCn12QeKVN_RgvU5IhVi6y8ubAmUjpb8wnwnFpHtyCooVduKZyka6WPuVvjxrkaZWmdtbaxJm8MbFWXlKcdg_F_m6Tptnisfj1w0d2qJ74nE_jfriUZakYAB2Hm2n8mrWUPT3dbAwK7kLX3U-MhjDkIoNr2Z6xUeNWLPoVmXhTC-aSK9gBVym8pkdwfz6sJ6AjvGBDKGscvEzBHH4qg",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "prompt",
+							"value": "Traduce: muchísimas gracias Laneycka por tu reseña y por cuidar tan bien de nuestra casa. Esperamos tenerte de vuelta en otra ocasión\n",
+							"type": "text"
+						},
+						{
+							"key": "lang",
+							"value": "ingles",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/gpt/text-to-audio/1712865817538",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gpt",
+						"text-to-audio",
+						"1712865817538"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "proscons-stream",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiJlUnVmUXJxMEhGalJMTHk4T3M1ekJya013SFFQV08xYjVwYlJQcVVPUXpJPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiS2ZEYWhGTjNSZmlPZTgxNmVIeHlBUSIsInN1YiI6IjkxOGJmNTYwLWQwYzEtNzAwNy1hY2ZjLThhNmY3OTNiYWI3YSIsImF1ZCI6Ijd1NzN2OGFwNzYwaHBqbzJvazAxa2ZuYTFtIiwiZXZlbnRfaWQiOiI5ZjFmNzg5OS04MjQyLTRiM2MtYmJkMy02YTU1N2RhNzFiMDEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTcxMjY4NzA4MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfQllVNVRTb3pCIiwiY29nbml0bzp1c2VybmFtZSI6InB1a2llcyIsImV4cCI6MTcxMjY5MDY4MywiaWF0IjoxNzEyNjg3MDgzLCJqdGkiOiJjNGRhOWYxMy1iMWNjLTQ2OTEtOTQzYS03ZThlOTI5Y2ExMmYifQ.D77x2FmtioWvc3JFTUoZs6NN2LcL0UKfrXZEPNlICuFtwVksnEv5WHGL-LmQ7E4rAy1XqvS79SIaoAE2jfi2ooEejnuVqF6iJev-50o2o7OX0QVXN5W1kdVYk_xUPIvROlCDCn12QeKVN_RgvU5IhVi6y8ubAmUjpb8wnwnFpHtyCooVduKZyka6WPuVvjxrkaZWmdtbaxJm8MbFWXlKcdg_F_m6Tptnisfj1w0d2qJ74nE_jfriUZakYAB2Hm2n8mrWUPT3dbAwK7kLX3U-MhjDkIoNr2Z6xUeNWLPoVmXhTC-aSK9gBVym8pkdwfz6sJ6AjvGBDKGscvEzBHH4qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJraWQiOiJlUnVmUXJxMEhGalJMTHk4T3M1ekJya013SFFQV08xYjVwYlJQcVVPUXpJPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiS2ZEYWhGTjNSZmlPZTgxNmVIeHlBUSIsInN1YiI6IjkxOGJmNTYwLWQwYzEtNzAwNy1hY2ZjLThhNmY3OTNiYWI3YSIsImF1ZCI6Ijd1NzN2OGFwNzYwaHBqbzJvazAxa2ZuYTFtIiwiZXZlbnRfaWQiOiI5ZjFmNzg5OS04MjQyLTRiM2MtYmJkMy02YTU1N2RhNzFiMDEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTcxMjY4NzA4MywiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfQllVNVRTb3pCIiwiY29nbml0bzp1c2VybmFtZSI6InB1a2llcyIsImV4cCI6MTcxMjY5MDY4MywiaWF0IjoxNzEyNjg3MDgzLCJqdGkiOiJjNGRhOWYxMy1iMWNjLTQ2OTEtOTQzYS03ZThlOTI5Y2ExMmYifQ.D77x2FmtioWvc3JFTUoZs6NN2LcL0UKfrXZEPNlICuFtwVksnEv5WHGL-LmQ7E4rAy1XqvS79SIaoAE2jfi2ooEejnuVqF6iJev-50o2o7OX0QVXN5W1kdVYk_xUPIvROlCDCn12QeKVN_RgvU5IhVi6y8ubAmUjpb8wnwnFpHtyCooVduKZyka6WPuVvjxrkaZWmdtbaxJm8MbFWXlKcdg_F_m6Tptnisfj1w0d2qJ74nE_jfriUZakYAB2Hm2n8mrWUPT3dbAwK7kLX3U-MhjDkIoNr2Z6xUeNWLPoVmXhTC-aSK9gBVym8pkdwfz6sJ6AjvGBDKGscvEzBHH4qg",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "prompt",
+							"value": "¿Puedes comparar entre un carro o una moto?",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/gpt/pros-cons-discusser-stream",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"gpt",
+						"pros-cons-discusser-stream"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
