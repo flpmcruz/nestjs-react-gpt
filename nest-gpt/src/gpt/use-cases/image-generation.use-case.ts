@@ -1,5 +1,4 @@
 import OpenAI from 'openai';
-import * as path from 'path';
 import * as fs from 'fs';
 import { downloadBase64ImageAsPng, downloadImageAsPng } from 'src/helpers';
 
@@ -15,6 +14,8 @@ export const imageGenerationUseCase = async (
 ) => {
   const { prompt, maskImage, originalImage } = options;
 
+  console.log({ prompt, maskImage, originalImage })
+
   // Generate image
   if (!originalImage || !maskImage) {
     const response = await openai.images.generate({
@@ -27,15 +28,10 @@ export const imageGenerationUseCase = async (
     });
 
     const fileName = await downloadImageAsPng(response.data[0].url);
-    const url = path.join(
-      process.env.SERVER_URL,
-      'gpt',
-      'image-generation',
-      fileName,
-    );
+    const url = `${process.env.SERVER_URL}/gpt/image-generation/${fileName}`;
 
     return {
-      localUrl: url,
+      url,
       openAIUrl: response.data[0].url,
       revised_prompt: response.data[0].revised_prompt,
     };
@@ -56,15 +52,10 @@ export const imageGenerationUseCase = async (
   });
 
   const fileName = await downloadImageAsPng(response.data[0].url);
-  const url = path.join(
-    process.env.SERVER_URL,
-    'gpt',
-    'image-generation',
-    fileName,
-  );
+  const url = `${process.env.SERVER_URL}/gpt/image-generation/${fileName}`;
 
   return {
-    localUrl: url,
+    url,
     openAIUrl: response.data[0].url,
     revised_prompt: response.data[0].revised_prompt,
   };

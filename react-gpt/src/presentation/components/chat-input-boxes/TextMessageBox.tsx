@@ -7,12 +7,9 @@ interface Props {
   disableCorrections?: boolean;
 }
 
-
 export const TextMessageBox = ({ onSendMessage, placeholder, disableCorrections = false }: Props) => {
 
   const [message, setMessage] = useState('')
-
-
 
   const handleSendMessage = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -45,10 +42,8 @@ export const TextMessageBox = ({ onSendMessage, placeholder, disableCorrections 
             onChange={ (e) => setMessage( e.target.value ) }
           />
 
-
         </div>
       </div>
-
 
       <div className="ml-4">
           <button className="btn-primary">
@@ -56,9 +51,6 @@ export const TextMessageBox = ({ onSendMessage, placeholder, disableCorrections 
             <i className="fa-regular fa-paper-plane"></i>
           </button>
       </div>
-
-
-
 
     </form>
   )

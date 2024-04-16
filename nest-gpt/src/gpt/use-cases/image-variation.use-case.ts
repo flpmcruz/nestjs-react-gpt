@@ -1,5 +1,4 @@
 import OpenAI from 'openai';
-import * as path from 'path';
 import * as fs from 'fs';
 import { downloadImageAsPng } from 'src/helpers';
 
@@ -24,15 +23,10 @@ export const imageVariationUseCase = async (
   });
 
   const fileName = await downloadImageAsPng(response.data[0].url);
-  const url = path.join(
-    process.env.SERVER_URL,
-    'gpt',
-    'image-generation',
-    fileName,
-  );
+  const url = `${process.env.SERVER_URL}/gpt/image-generation/${fileName}`;
 
   return {
-    localUrl: url,
+    url,
     openAIUrl: response.data[0].url,
     revised_prompt: response.data[0].revised_prompt,
   };

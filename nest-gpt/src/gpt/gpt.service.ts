@@ -62,11 +62,11 @@ export class GptService {
     return await audioToTextUseCase(this.openai, { prompt, audioFile });
   }
 
-  async getAudio(fileId: string) {
+  async getImage(fileId: string) {
     return await getImageUseCase(fileId);
   }
 
-  async getImage(fileId: string) {
+  async getAudio(fileId: string) {
     return await getAudioUseCase(fileId);
   }
 

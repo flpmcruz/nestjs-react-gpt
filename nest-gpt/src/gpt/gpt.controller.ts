@@ -72,7 +72,7 @@ export class GptController {
     @Res() res: Response,
     @Param('fileId') fileId: string,
   ) {
-    const filePath = await this.gptService.getAudio(fileId);
+    const filePath = await this.gptService.getImage(fileId);
     res.setHeader('Content-Type', 'image/png');
     res.status(HttpStatus.OK);
     res.sendFile(filePath);
