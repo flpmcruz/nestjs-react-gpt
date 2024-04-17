@@ -2,10 +2,12 @@ import type { TranslateResponse } from "../../interfaces";
 
 export const translateUseCase = async (prompt: string, lang: string) => {
   try {
+    const apiKey = localStorage.getItem("token") || "";
     const resp = await fetch(`${import.meta.env.VITE_GPT_API}/translate`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "api-key": apiKey,
       },
       body: JSON.stringify({ prompt, lang }),
     });

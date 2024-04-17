@@ -1,10 +1,12 @@
 
 export const textToAudioUseCase = async (prompt: string, voice: string) => {
   try {
+    const apiKey = localStorage.getItem("token") || "";
     const resp = await fetch(`${import.meta.env.VITE_GPT_API}/text-to-audio`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "api-key": apiKey
       },
       body: JSON.stringify({ prompt, voice }),
     });

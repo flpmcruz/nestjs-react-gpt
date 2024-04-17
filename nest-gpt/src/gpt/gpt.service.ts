@@ -24,42 +24,49 @@ import {
 
 @Injectable()
 export class GptService {
-  private openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
-  });
-
-  async orthographyCheck(ortographyDto: OrtographyDto) {
-    return await orthographyCheckUseCase(this.openai, {
+  async orthographyCheck(ortographyDto: OrtographyDto, apiKey: string) {
+    const openai = new OpenAI({ apiKey });
+    return await orthographyCheckUseCase(openai, {
       prompt: ortographyDto.prompt,
     });
   }
 
-  async prosConsDicusser({ prompt }: ProsConsDiscusserDto) {
-    return await prosConsDicusserUseCase(this.openai, { prompt });
+  async prosConsDicusser({ prompt }: ProsConsDiscusserDto, apiKey: string) {
+    const openai = new OpenAI({ apiKey });
+    return await prosConsDicusserUseCase(openai, { prompt });
   }
 
-  async translate({ prompt, lang }: TranslateDto) {
-    return await translateUseCase(this.openai, { prompt, lang });
+  async translate({ prompt, lang }: TranslateDto, apiKey: string) {
+    const openai = new OpenAI({ apiKey });
+    return await translateUseCase(openai, { prompt, lang });
   }
 
-  async imageGeneration(imageGenerationDto: ImageGenerationDto) {
-    return await imageGenerationUseCase(this.openai, { ...imageGenerationDto });
+  async imageGeneration(
+    imageGenerationDto: ImageGenerationDto,
+    apiKey: string,
+  ) {
+    const openai = new OpenAI({ apiKey });
+    return await imageGenerationUseCase(openai, { ...imageGenerationDto });
   }
 
-  async imageVariation({ baseImage }: ImageVariationDto) {
-    return await imageVariationUseCase(this.openai, { baseImage });
+  async imageVariation({ baseImage }: ImageVariationDto, apiKey: string) {
+    const openai = new OpenAI({ apiKey });
+    return await imageVariationUseCase(openai, { baseImage });
   }
 
-  async textToAudio({ prompt, voice }: TextToAudioDto) {
-    return await textToAudioUseCase(this.openai, { prompt, voice });
+  async textToAudio({ prompt, voice }: TextToAudioDto, apiKey: string) {
+    const openai = new OpenAI({ apiKey });
+    return await textToAudioUseCase(openai, { prompt, voice });
   }
 
   async audioToText(
     audioFile: Express.Multer.File,
     audioToTextDto: AudioToTextDto,
+    apiKey: string,
   ) {
     const { prompt } = audioToTextDto;
-    return await audioToTextUseCase(this.openai, { prompt, audioFile });
+    const openai = new OpenAI({ apiKey });
+    return await audioToTextUseCase(openai, { prompt, audioFile });
   }
 
   async getImage(fileId: string) {
@@ -70,7 +77,11 @@ export class GptService {
     return await getAudioUseCase(fileId);
   }
 
-  async prosConsDicusserStream({ prompt }: ProsConsDiscusserDto) {
-    return await prosConsDicusserStreamUseCase(this.openai, { prompt });
+  async prosConsDicusserStream(
+    { prompt }: ProsConsDiscusserDto,
+    apiKey: string,
+  ) {
+    const openai = new OpenAI({ apiKey });
+    return await prosConsDicusserStreamUseCase(openai, { prompt });
   }
 }

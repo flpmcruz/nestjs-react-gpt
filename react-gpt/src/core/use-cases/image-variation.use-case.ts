@@ -8,14 +8,15 @@ interface Image {
 export const imageVariationUseCase = async (
   originalImage: string,
 ): Promise<GeneratedImage> => {
-  console.log({ originalImage });
   try {
+    const apiKey = localStorage.getItem("token") || "";
     const resp = await fetch(
       `${import.meta.env.VITE_GPT_API}/image-variation`,
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "api-key": apiKey,
         },
         body: JSON.stringify({
           baseImage: originalImage,

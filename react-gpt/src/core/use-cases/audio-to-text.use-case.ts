@@ -2,6 +2,7 @@ import type { AudioToTextResponse } from "../../interfaces";
 
 export const audioToTextUseCase = async (audioFile: File, prompt?: string) => {
   try {
+    const apiKey = localStorage.getItem("token") || "";
     const formData = new FormData();
     formData.append("file", audioFile);
     if (prompt) {
@@ -10,6 +11,9 @@ export const audioToTextUseCase = async (audioFile: File, prompt?: string) => {
 
     const resp = await fetch(`${import.meta.env.VITE_GPT_API}/audio-to-text`, {
       method: "POST",
+      headers: {
+        "api-key": apiKey,
+      },
       body: formData,
     });
 

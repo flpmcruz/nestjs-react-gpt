@@ -3,12 +3,14 @@ export async function* ProsConsStreamGeneratorUseCase(
   abortSignal: AbortSignal
 ) {
   try {
+    const apiKey = localStorage.getItem("token") || "";
     const resp = await fetch(
       `${import.meta.env.VITE_GPT_API}/pros-cons-discusser-stream`,
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "api-key": apiKey,
         },
         body: JSON.stringify({ prompt }),
         signal: abortSignal,

@@ -11,12 +11,14 @@ export const imageGenerationUseCase = async (
   maskImage?: string
 ): Promise<GeneratedImage> => {
   try {
+    const apiKey = localStorage.getItem("token") || "";
     const resp = await fetch(
       `${import.meta.env.VITE_GPT_API}/image-generation`,
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "api-key": apiKey,
         },
         body: JSON.stringify({
           prompt,
